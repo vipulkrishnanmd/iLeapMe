@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('content/start');
 });
 
 Auth::routes();
@@ -21,4 +21,18 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/start', function () {
     return view('content/start');
+});
+
+Route::get('/tld', function () {
+    return view('content/tld');
+});
+
+Route::post('/gettld', 'AjaxController@gettld');
+
+Route::get('/tutorial', function () {
+    return view('content/tutorial');
+});
+
+Route::get('/test', function () {
+    return view('content/test');
 });

@@ -19,7 +19,7 @@
         <div class="col-md-4">
           <h2>Here for the first time?</h2>
           <p>We provide a smooth and starting for you to the internet. Please click on the button below. Let us start the journey!</p>
-          <p><a class="btn btn-secondary" href="/newuser" role="button">Start &raquo;</a></p>
+          <p><a class="btn btn-secondary" href="/tutorial" role="button">Start &raquo;</a></p>
         </div>
         <div class="col-md-4">
           <h2>Want to know where to get a service on Internet?</h2>
