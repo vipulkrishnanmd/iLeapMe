@@ -23,9 +23,12 @@
                     </div>
 
   
-  <div id="msg">
-  </div>
-  </div>
+                    <div class="jumbotron col-md-6 offset-md-3" id="msg">
+                      <h2>Please enter the TLD and hit search!</h2>
+                      <p id="p1"></p>
+                      <p id="p2"></p>
+                    </div>
+                  </div>
 
 <script src="http://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -47,7 +50,10 @@
                     tld: jQuery('#tld').val()
                   },
                   success: function(result){
-                     $( "#msg" ).replaceWith( "<h2>" + result.success + "</h2>" );
+                     $( "#msg" ).find("h2").text("TLD Info : " + result.tld);
+                     $( "#msg" ).find("#p1").text("Country : " + result.country );
+                     $( "#msg" ).find("#p2").text("Notes : " + result.description );
+                  result = null;
                   }});
                });
             });

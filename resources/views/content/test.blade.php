@@ -1,57 +1,86 @@
-
-<!DOCTYPE html>
-<html>
-<head>
-  
-  <title>Quick Start - Leaflet</title>
-
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
-
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
-
-
-  
-</head>
-<body>
-
-
-<div id="mapid" style="width: 600px; height: 400px;"></div>
-<script>
-var lat = 0;
-var long = 0;
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else { 
-        x.innerHTML = "Geolocation is not supported by this browser.";
-    }
-}
-
-function showPosition(position) {
-  lat = position.coords.latitude;
-    long = position.coords.longitude;
-    var mymap = L.map('mapid').setView([lat, long], 13);
-
-  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-    maxZoom: 18,
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-      '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-      'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    id: 'mapbox.streets'
-  }).addTo(mymap);
-
-
-}
-window.onload = getLocation();
-
-  
+@extends('layouts.app')
+<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bar.css">
 </script>
+<script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+<div class="jquery-script-clear"></div>
+</div>
+</div>
+@section('content')
+    <div id="wrapper">
+         <div class="chart">
+            <h3>My Technical Skills</h3>
+            <table id="data-table" border="1" cellpadding="10" cellspacing="0"
+            summary="Percentage of knowledge acquired during my experience
+            for each technology or language.">
+               <thead>
+                  <tr>
+                     <td>&nbsp;</td>
+                     <th scope="col"></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <th scope="row">HTML/CSS</th>
+                     <td>85</td>
+                  </tr>
+                  <tr>
+                     <th scope="row">Bootstrap</th>
+                     <td>90</td>
+                  </tr>
+                  <tr>
+                     <th scope="row">JavaScript</th>
+                     <td>70</td>
+                  </tr>
+                  <tr>
+                     <th scope="row">AngularJS</th>
+                     <td>60</td>
+                  </tr>
+                  <tr>
+                     <th scope="row">jQuery</th>
+                     <td>85</td>
+                  </tr>
+                  <tr>
+                     <th scope="row">Ajax</th>
+                     <td>60</td>
+                  </tr>
+                  <tr>
+                     <th scope="row">PHP</th>
+                     <td>50</td>
+                  </tr>
+                  <tr>
+                     <th scope="row">MySQL</th>
+                     <td>60</td>
+                  </tr>
+                  <tr>
+                     <th scope="row">ITIL</th>
+                     <td>90</td>
+                  </tr>
+                  <tr>
+                     <th scope="row">Scrum</th>
+                     <td>90</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </div>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+      <script src="js/graph.js"></script>
+      <script type="text/javascript">
 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
 
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
 
-</body>
+</script>
+  </body>
 </html>
