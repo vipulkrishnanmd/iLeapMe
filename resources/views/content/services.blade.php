@@ -1,5 +1,6 @@
 @extends('layouts.app')
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+<!-- Style for the list -->
 <style>
 * {
   box-sizing: border-box;
@@ -44,6 +45,7 @@
 
 </style>
 
+<!--Script for the list -->
 <script>
   function myFunction() {
     var input, filter, ul, li, a, i;
@@ -72,15 +74,18 @@
     valueNames: ['name'],
     page: 3,
     pagination: true
-  });
-  
+  }); 
 </script>
+
+<!-- Main jumbotron -->
 <div class="jumbotron">
   <div class="container">
     <h1 class="display-3">Find a Service</h1>
     <p class="h3">Find a service on the internet. See the popular categories below. Use the search box to filter.</p>
   </div>
 </div>
+
+<!-- Popular functions -->
 <div class="container">
   <div class="card-group">
 
@@ -130,6 +135,8 @@
     </div>
     <!--end of col-->
   </div>
+
+  <!-- List section -->
   <div id="test-list">
     <ul id="myUL" class="list list-group">
       @foreach ($services as $service)
