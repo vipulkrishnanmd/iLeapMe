@@ -25,6 +25,6 @@ class AjaxController extends Controller
     		$tld->country = "Not Available";
     	}
 
-      	return response()->json(['tld'=>$tld->tld, 'country' => $tld->country, 'description' => $tld->description]);
-    }
+     return response()->json(['tld'=>$tld->tld, 'country' => $tld->country, 'description' => $tld->description]);
+ }
 }
