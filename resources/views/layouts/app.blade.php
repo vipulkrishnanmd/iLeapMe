@@ -13,6 +13,21 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
+    <script type="text/javascript">
+      document.onkeyup = function(e) {
+          if (e.which == 65 && e.altKey) {
+            window.location.href = '/tut';
+        } else if (e.which == 66 && e.altKey) {
+            window.location.href = '/services';
+        } else if (e.which == 67 && e.altKey) {
+            window.location.href = '/tld';
+        } else if (e.which == 90 && e.altKey) {
+            window.history.back();
+        } else if (e.which == 77 && e.altKey) {
+            window.location.href = '/';
+        }
+      };
+    </script>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
@@ -42,6 +57,12 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
+                            <li class="nav-item">
+                                <a class="nav-link" href="/services">Find Service</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/tld">Check URL</a>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>

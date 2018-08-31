@@ -36,3 +36,11 @@ Route::get('/tutorial', function () {
 Route::get('/test', function () {
     return view('content/test');
 });
+
+Route::get('/services', 'ServiceController@index');
+
+Route::get('service/{id}', 'ServiceController@showService');
+
+Route::get('/tut', function () {
+    return view('content/tut');
+});
