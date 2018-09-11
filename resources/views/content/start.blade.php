@@ -1,44 +1,177 @@
 @extends('layouts.app')
-<style type="text/css">
-.jumbotron h1,
-.jumbotron .h1 {
-  color: #4cae4c;
-  font-size: 65px;
-}
-</style>
+
 @section('content')
-<div class="container">
-	<div class="jumbotron">
-		<h1 class="txt-success">
-			Welcome to Your Safe Internet
-		</h1>
-	</div>
-	<div class="container">
-    <!-- Example row of columns -->
-    <div class="row">
-      <div class="col-md-4">
-        <h2>Here for the first time?</h2>
-        <p>We provide a smooth and starting for you to the internet. Please click on the button below. Let us start the journey!</p>
-        <p><a class="btn btn-secondary" href="/tut" role="button">Start &raquo;</a></p>
+    <!-- END templateux-navbar -->
+    <section class="templateux-hero">
+      <div class="container">
+        <div class="row align-items-center justify-content-center intro">
+          <div class="col-md-10" data-aos="fade-up">
+            <h1>Welcome to Your Safe Internet! No more worries about your digital security.</h1>
+            <a href="#next" class="go-down js-smoothscroll"></a>
+          </div>
+        </div>
       </div>
-      <div class="col-md-4">
-        <h2>Want to know where to get a service on Internet?</h2>
-        <p>We recommend you the safest choice to get the set service. Click the below button</p>
-        <p><a class="btn btn-secondary" href="/services" role="button">Check Now &raquo;</a></p>
-      </div>
-      <div class="col-md-4">
-        <h2>Want to get the details of a web address?</h2>
-        <p>The web addresses can be different types and can be identified with the Top Level Domain name. Click the below button to test a URL</p>
-        <p><a class="btn btn-secondary" href="/tld" role="button">View details &raquo;</a></p>
-      </div>
-    </div>
+    </section>
+    <!-- END templateux-hero -->
 
-    <hr>
+    <section class="templateux-portfolio-overlap" id="next">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6" data-aos="fade-up">
+            <a class="project animsition-link" href="{{url('/url')}}">
+              <figure>
+                <img src="images/url.jpg" alt="Free Template" class="img-fluid">  
+              </figure>
+              <div class="project-hover">
+                <div class="project-hover-inner">
+                  <h2>Check your URL</h2>
+                  <span>See how safe a website is</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <a class="project animsition-link" href="{{url('/services')}}">
+              <figure>
+                <img src="images/services.jpg" alt="Free Template" class="img-fluid">  
+              </figure>
+              <div class="project-hover">
+                <div class="project-hover-inner">
+                  <h2>Find a service!</h2>
+                  <span>Explore the internet.</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- END row -->
+    
+        <div class="row">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up">
+            <a class="project animsition-link" href="work-single.html">
+              <figure>
+                <img src="images/older.jpg" alt="Free Template" class="img-fluid">  
+              </figure>
+              <div class="project-hover">
+                <div class="project-hover-inner">
+                  <h2>Keep smiling!</h2>
+                  <span>:)</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <a class="project animsition-link" href="work-single.html">
+              <figure>
+                <img src="images/com.jpg" alt="Free Template" class="img-fluid">  
+              </figure>
+              <div class="project-hover">
+                <div class="project-hover-inner">
+                  <h2>Something else</h2>
+                  <span>View</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <a class="project animsition-link" href="work-single.html">
+              <figure>
+                <img src="images/hero_1.jpg" alt="Free Template" class="img-fluid">  
+              </figure>
+              <div class="project-hover">
+                <div class="project-hover-inner">
+                  <h2>Something else</h2>
+                  <span>View</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          
+        </div>
+        <!-- END row -->
+      </div>
+    </section>
 
-    <footer>
-      <p>&copy; iLeap 2018</p>
-    </footer>
-  </div>
-</div>
+   
+    <!-- END section -->
+    <section class="templateux-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-4" data-aos="fade-up">
+            <h2 class="section-heading mt-3">What We Do</h2>
+          </div>
+          <div class="col-md-8" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="row">
+              <div class="col-md-12">
+                <h2 class="mb-5">We make our seniors safe on the internet. We provide them tools and tricks to stay safe online.</h2>
+              </div>
+            </div>
+            
+
+            <div class="row  pt-sm-0 pt-md-5 mb-5">
+
+              <div class="col-lg-6">
+                <div class="media templateux-media mb-4">
+                  <div class="mr-4 icon">
+                    <span class="icon-monitor display-3"></span>
+                  </div>
+                  <div class="media-body">
+                    <h3 class="h5">Find Services</h3>
+                    <p>Explore the services available on the internet.  We provide recommend you the best in class and safe services.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="media templateux-media mb-4">
+                  <div class="mr-4 icon">
+                    <span class="icon-command display-3"></span>
+                  </div>
+                  <div class="media-body">
+                    <h3 class="h5">Check your URL.</h3>
+                    <p>Ensure a website is safe and good for you before going to it. We inform you all you wnat to know about a website</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!-- END row -->
+            <div class="row clearfix">
+              <div class="col-lg-6">
+                <div class="media templateux-media mb-4">
+                  <div class="mr-4 icon">
+                    <span class="icon-command display-3"></span>
+                  </div>
+                  <div class="media-body">
+                    <h3 class="h5">Find free internet spot</h3>
+                    <p>Dont use the internet on your phone? Find a public internet access point to use internet on the go.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                
+                <div class="media templateux-media mb-4">
+                  <div class="mr-4 icon">
+                    <span class="icon-monitor display-3"></span>
+                  </div>
+                  <div class="media-body">
+                    <h3 class="h5">Safe search engine</h3>
+                    <p>Surf the internet with a safe search engine exclussively designed for the seniors</p>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <!-- END row -->
+
+            
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END section -->
 
 @endsection
+  
+  

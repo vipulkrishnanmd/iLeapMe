@@ -23,11 +23,12 @@ Route::get('/start', function () {
     return view('content/start');
 });
 
-Route::get('/tld', function () {
+Route::get('/url', function () {
     return view('content/tld');
 });
 
 Route::post('/gettld', 'AjaxController@gettld');
+Route::get('/gettld', 'AjaxController@gettld');
 
 Route::get('/tutorial', function () {
     return view('content/tutorial');
@@ -35,6 +36,10 @@ Route::get('/tutorial', function () {
 
 Route::get('/test', function () {
     return view('content/test');
+});
+
+Route::get('/maptest', function () {
+    return view('content/maptest');
 });
 
 Route::get('/services', 'ServiceController@index');

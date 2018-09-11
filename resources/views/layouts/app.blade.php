@@ -1,101 +1,86 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
+<html lang="en">
+  <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'iLeap') }}</title>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <script type="text/javascript">
-      document.onkeyup = function(e) {
-          if (e.which == 65 && e.altKey) {
-            window.location.href = '/tut';
-        } else if (e.which == 66 && e.altKey) {
-            window.location.href = '/services';
-        } else if (e.which == 67 && e.altKey) {
-            window.location.href = '/tld';
-        } else if (e.which == 90 && e.altKey) {
-            window.history.back();
-        } else if (e.which == 77 && e.altKey) {
-            window.location.href = '/';
-        }
-      };
-    </script>
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>iLeap &mdash; </title>
+    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/aos.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/hamburgers/hamburgers.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('fonts/icomoon/style.css')}}">
+    <link rel="stylesheet" href="{{asset('css/animsition.min.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
+    
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+  </head>
+  <body>
+  
+  <div class="js-animsition animsition" data-animsition-in-class="fade-in" data-animsition-out-class="fade-out">
 
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-</head>
-<body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'iLeap') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <header class="templateux-navbar" data-aos="fade-down">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-3 col-3"><div class="site-logo"><a href="/" class="animsition-link">iLeap</a></div></div>
+          <div class="col-sm-9 col-9 text-right">
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
+            <button class="hamburger hamburger--spin toggle-menu ml-auto js-toggle-menu" type="button">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>  
 
-                    </ul>
+            <nav class="templateux-menu js-templateux-menu" role="navigation">
+              <ul class="list-unstyled">
+                <li class="d-md-none d-block active"><a href="index.html" class="animsition-link">Home</a></li>
+                <li><a href="/url" class="animsition-link">Check URL</a></li>
+                <li><a href="/services" class="animsition-link">Find Services</a></li>
+                <li><a href="blog.html" class="animsition-link">Something</a></li>
+                <li><a href="contact.html" class="animsition-link">About</a></li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+      </div>
+    </header>
 
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="/services">Find Service</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/tld">Check URL</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                            </li>
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <main class="py-4">
+        <div>
             @yield('content')
-        </main>
+        </div>
     </div>
-</body>
+    <a class="templateux-section templateux-cta animsition-link mt-5" href="contact.html" data-aos="fade-up">
+      <div class="container-fluid">
+        <div class="cta-inner">
+          <h2><span class="words-1">Give us some feedback.</span> <span class="words-2">Let's improve together.</span></h2>
+        </div>
+      </div>
+    </a>
+    <!-- END call to action -->
+
+    <footer class="templateux-footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 text-md-left text-center">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" class="text-primary">Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          </p>
+          </div>
+          <div class="col-md-6 text-md-right text-center footer-social">
+            <a href="#" class="p-3"><span class="icon-facebook2"></span></a>
+            <a href="#" class="p-3"><span class="icon-twitter2"></span></a>
+            <a href="#" class="p-3"><span class="icon-dribbble2"></span></a>
+            <a href="#" class="p-3"><span class="icon-instagram"></span></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+<script src="{{asset('js/scripts-all.js')}}"></script>
+<script src="{{asset('js/main.js')}}"></script>
+  
+  </body>
 </html>
