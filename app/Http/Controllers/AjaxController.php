@@ -76,7 +76,7 @@ class AjaxController extends Controller
 
         $opr_res = $opr_client->request('GET', $opr_url, [
             'headers' => [
-                'API-OPR' => 'wg8cwwc088scwwc0k8cgoss8c8s00sw0kwo0wssc'
+                'API-OPR' => 'apikey'
             ]
         ]);
 
@@ -166,7 +166,7 @@ class AjaxController extends Controller
 
         $gsb_body = json_decode($gsb_body_json, true);
           
-        $gsb_res = $gsb_client->request('POST', 'https://safebrowsing.googleapis.com/v4/threatMatches:find?key=AIzaSyDd_L8akmu5VUOhp3sFZD2pxPMhXYAkOV8', ['json' => $gsb_body]);
+        $gsb_res = $gsb_client->request('POST', 'https://safebrowsing.googleapis.com/v4/threatMatches:find?key=apikey', ['json' => $gsb_body]);
         $gsb_res_body = $gsb_res->getBody();
 
         $gsb_res_obj = json_decode($gsb_res_body);
@@ -221,7 +221,8 @@ class AjaxController extends Controller
         $page_content =  file_get_contents($request->tld);
         $ad_code = '';
 
-        if (strpos($page_content, 'googletag.pubads') !== false) {
+        //if (strpos($page_content, 'googletag.pubads') !== false) {
+        if (preg_match('(googletag.pubads|syndication|media.net)', $page_content) === 1) {
             $ad_code = '<div class="card text-warning border-warning mb-3" style="max-width: 18rem;">
         <div class="card-header">Advertisements</div>
         <div class="card-body">

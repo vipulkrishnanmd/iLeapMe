@@ -49,3 +49,7 @@ Route::get('service/{id}', 'ServiceController@showService');
 Route::get('/tut', function () {
     return view('content/tut');
 });
+
+Route::get('/gmaptest', function () {
+    return view('content/gmaptest');
+});
