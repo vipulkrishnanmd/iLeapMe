@@ -2,13 +2,22 @@
 
 @section('content')
     <!-- END templateux-navbar -->
+    <br><Br>
     <section class="templateux-hero">
       <div class="container">
         <div class="row align-items-center justify-content-center intro">
-          <div class="col-md-10" data-aos="fade-up">
-            <h1>Welcome to Your Safe Internet! No more worries about your digital security.</h1>
+          <div class="col-md-5" data-aos="fade-up">
+            <h1 class="text-danger">Welcome to Your Safe Internet!</h1>
             <a href="#next" class="go-down js-smoothscroll"></a>
           </div>
+          <div class="col-md-7" data-aos="fade-up">
+            <figure>
+                <img src="images/testui.png" alt="Free Template" class="img-fluid">  
+              </figure>
+            </div>
+          <div class="progress">
+  <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
         </div>
       </div>
     </section>

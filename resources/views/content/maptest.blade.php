@@ -22,7 +22,7 @@
 <body>
 <div id='map-popups' class='map'> </div>
 <script>
-L.mapbox.accessToken = 'pk.apikey.apikey';
+L.mapbox.accessToken = 'pk..';
 var mapPopups = L.mapbox.map('map-popups', 'mapbox.streets')
   .setView([37.8, -96], 4);
 var myLayer = L.mapbox.featureLayer().addTo(mapPopups);

@@ -53,3 +53,7 @@ Route::get('/tut', function () {
 Route::get('/gmaptest', function () {
     return view('content/gmaptest');
 });
+
+Route::get('/extapi', 'AjaxController@extApiGet');
+
+Route::get('/webshrinker', 'AjaxController@websh');

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Tld;
+use App\Domain;
 
 class AjaxController extends Controller
 {
@@ -76,7 +77,7 @@ class AjaxController extends Controller
 
         $opr_res = $opr_client->request('GET', $opr_url, [
             'headers' => [
-                'API-OPR' => 'apikey'
+                'API-OPR' => ''
             ]
         ]);
 
@@ -166,7 +167,7 @@ class AjaxController extends Controller
 
         $gsb_body = json_decode($gsb_body_json, true);
           
-        $gsb_res = $gsb_client->request('POST', 'https://safebrowsing.googleapis.com/v4/threatMatches:find?key=apikey', ['json' => $gsb_body]);
+        $gsb_res = $gsb_client->request('POST', 'https://safebrowsing.googleapis.com/v4/threatMatches:find?key=', ['json' => $gsb_body]);
         $gsb_res_body = $gsb_res->getBody();
 
         $gsb_res_obj = json_decode($gsb_res_body);
@@ -222,7 +223,7 @@ class AjaxController extends Controller
         $ad_code = '';
 
         //if (strpos($page_content, 'googletag.pubads') !== false) {
-        if (preg_match('(googletag.pubads|syndication|media.net)', $page_content) === 1) {
+        if (preg_match('(googletag.pubads|syndication)', $page_content) === 1) {
             $ad_code = '<div class="card text-warning border-warning mb-3" style="max-width: 18rem;">
         <div class="card-header">Advertisements</div>
         <div class="card-body">
@@ -248,6 +249,82 @@ class AjaxController extends Controller
         
         // page content analysis ends here//
 
+        // category analysis starts here
+
+        $domainc = Domain::find($domain);
+        if($domainc != null){
+          echo $domainc->category;
+        }
+        else{
+
+          $access_key = "";
+          $secret_key = "";
+
+          $url = $domain;
+
+//$request = webshrinker_categories_v3($access_key, $secret_key, $url);
+
+          $options=array();
+
+          $options['key'] = $access_key;
+
+          $options['taxonomy'] = "webshrinker";
+
+          $parameters = http_build_query($options);
+
+          $request = sprintf("categories/v3/%s?%s", base64_encode($url), $parameters);
+          $hash = md5(sprintf("%s:%s", $secret_key, $request));
+
+          $request= "https://api.webshrinker.com/{$request}&hash={$hash}";
+
+// Initialize cURL and use pre-signed URL authentication
+          $ch = curl_init();
+          curl_setopt($ch, CURLOPT_URL, $request);
+          curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+          $response = curl_exec($ch);
+          $status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+
+          print_r(json_decode($response));
+
+          switch($status_code) {
+            case 200:
+              
+              $cat_response = json_decode($response);
+              print_r($cat_response);
+
+              $category = ""; 
+              $cat_code = '';
+
+              foreach ($cat_response->data[0]->categories as $cat) {
+                 $category = $category + ","+$cat
+              } 
+
+              json_decode($response)->data[0]->categories[0]->id;
+
+              break;
+
+
+            case 400:
+        // Bad or malformed HTTP request
+            break;
+            case 401:
+        // Unauthorized
+            break;
+            case 402:
+        // Request limit reached
+            break;
+          }
+
+        }
+
+
+
+        // category analysis ends here
+
+
+
+
 
 
         $code = $code.$tld_code.$safety_code.$gsb_code.$row_sep_code.$ad_code.$final_code;
@@ -256,4 +333,102 @@ class AjaxController extends Controller
         // return
         return response()->json(['tld'=>$tld->tld, 'country' => $tld->country, 'description' => $tld->description, 'gsb_threat'=>$match_arr[0], 'code' => $code]);
     }
+
+    public function extApiGet(Request $request){
+      $domain = parse_url($request->url, PHP_URL_HOST);
+
+      $opr_client = new \GuzzleHttp\Client();
+
+      $opr_url = 'https://openpagerank.com/api/v1.0/getPageRank?domains[]='.$domain;
+
+      $opr_res = $opr_client->request('GET', $opr_url, [
+            'headers' => [
+                'API-OPR' => ''
+            ]
+      ]);
+
+      $opr_res_body = $opr_res->getBody();
+
+      $opr_obj = json_decode($opr_res_body);
+
+      $reputation = $opr_obj->response[0]->page_rank_integer;
+      $data = 'no';
+      if ($reputation == null){
+        $data = 'yes';
+      }
+      elseif ((int)$reputation < 4) {
+        $data = 'yes';
+      }
+      return view('content.extapi', ['data' => $data]);
+    }
+
+
+
+    public function webshrinker_categories_v3($access_key, $secret_key, $url="", $options=array()) {
+    $options['key'] = $access_key;
+
+    $parameters = http_build_query($options);
+
+    $request = sprintf("categories/v3/%s?%s", base64_encode($url), $parameters);
+    $hash = md5(sprintf("%s:%s", $secret_key, $request));
+
+    return "https://api.webshrinker.com/{$request}&hash={$hash}";
+    }
+
+
+
+
+
+
+
+
+    public function websh(Request $request){
+      $access_key = "";
+$secret_key = "";
+
+$url = $request->url;
+
+//$request = webshrinker_categories_v3($access_key, $secret_key, $url);
+
+$options=array();
+
+$options['key'] = $access_key;
+
+$options['taxonomy'] = "webshrinker";
+
+    $parameters = http_build_query($options);
+
+    $request = sprintf("categories/v3/%s?%s", base64_encode($url), $parameters);
+    $hash = md5(sprintf("%s:%s", $secret_key, $request));
+
+    $request= "https://api.webshrinker.com/{$request}&hash={$hash}";
+
+// Initialize cURL and use pre-signed URL authentication
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $request);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+$response = curl_exec($ch);
+$status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+
+print_r(json_decode($response));
+
+switch($status_code) {
+    case 200:
+        print_r(json_decode($response));
+        break;
+    case 400:
+        // Bad or malformed HTTP request
+        break;
+    case 401:
+        // Unauthorized
+        break;
+    case 402:
+        // Request limit reached
+        break;
+}
+
+    
+    }
+
 }
