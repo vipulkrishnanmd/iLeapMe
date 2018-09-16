@@ -36,8 +36,8 @@
                 <li class="d-md-none d-block active"><a href="index.html" class="animsition-link">Home</a></li>
                 <li><a href="/url" class="animsition-link">Check URL</a></li>
                 <li><a href="/services" class="animsition-link">Find Services</a></li>
-                <li><a href="blog.html" class="animsition-link">Something</a></li>
-                <li><a href="contact.html" class="animsition-link">About</a></li>
+                <li><a href="/map" class="animsition-link">Find iLocations</a></li>
+                <li><a href="/attr" class="animsition-link">About</a></li>
               </ul>
             </nav>  
           </div>

@@ -56,4 +56,8 @@ Route::get('/gmaptest', function () {
 
 Route::get('/extapi', 'AjaxController@extApiGet');
 
-Route::get('/webshrinker', 'AjaxController@websh');
+Route::get('/extendedcheck', 'AjaxController@extendedCheck');
+
+Route::get('/map', function () {
+    return view('content/map');
+});
