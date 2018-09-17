@@ -18,11 +18,11 @@
               </div>
               <!--end of col-->
               <div class="col">
-                <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Enter your URL here. (eg http://ileap.me)" id="tld">
+                <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Enter your URL here. (eg http://ileap.me)" id="url" required>
               </div>
               <!--end of col-->
               <div class="col-auto">
-                <button class="btn btn-lg btn-success" id="ajaxSubmit">Check!</button>
+                <button class="btn btn-lg btn-success" id="ajaxSubmit" onclick="validateForm();">Check!</button>
               </div>
               <!--end of col-->
             </div>
@@ -65,6 +65,11 @@ crossorigin="anonymous">
 <script>
  jQuery(document).ready(function(){
   jQuery('#ajaxSubmit').click(function(e){
+   var x = document.getElementById('url').value;
+    if (!ValidURL(x)) {
+        alert("Please enter a valid url eg https://google.com");
+        return false;
+    }
    e.preventDefault();
    $.ajaxSetup({
     headers: {
@@ -73,10 +78,10 @@ crossorigin="anonymous">
   });
    $( "#card_section" ).replaceWith('<div id="card_section" class="text-center"><br><br><img src="/images/loading.gif" width="20%" alt="Loading.." class="img-fluid" width="10"></div>');
    jQuery.ajax({
-    url: "{{ url('/gettld') }}",
+    url: "{{ url('/geturl') }}",
     method: 'post',
     data: {
-      tld: jQuery('#tld').val()
+      url: jQuery('#url').val()
     },
     success: function(result){
      $( "#card_section" ).replaceWith(result.code);
@@ -85,5 +90,31 @@ crossorigin="anonymous">
    }});
  });
 });
+
+ var input = document.getElementById("url");
+
+// Execute a function when the user releases a key on the keyboard
+input.addEventListener("keyup", function(event) {
+  // Cancel the default action, if needed
+  event.preventDefault();
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    // Trigger the button element with a click
+    document.getElementById("ajaxSubmit").click();
+  }
+});
+
+function validateForm() {
+    
+}
+
+function ValidURL(str) {
+  var regex = /(http|https):\/\/(\w+:{0,1}\w*)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/;
+  if(!regex .test(str)) {
+    return false;
+  } else {
+    return true;
+  }
+}
 </script>
 @endsection

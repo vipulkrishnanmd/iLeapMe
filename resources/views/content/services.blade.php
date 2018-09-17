@@ -1,4 +1,5 @@
 @extends('layouts.app')
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
 <script type="text/javascript">
   var options = {
@@ -89,9 +90,9 @@
 <section class="templateux-portfolio-overlap" id="next">
   <div class="container-fluid">
     <!-- List section -->
-    <div class="list-group" data-aos="fade-up">
-      <a href="#" class="list-group-item active">
-        Select you service
+    <div class="list-group" data-aos="fade-up" id='myUL'>
+      <a class="list-group-item active">
+        <input type="text" id="myInput" onkeyup="myFunction();" placeholder="Search for services.." title="Type in a name" class="form-control form-control-lg form-control-borderless">
       </a>
       @foreach ($services as $service)
       <a href="/service/{{$service->id}}" class="list-group-item list-group-item-action">{{ $service->service }}</a>
@@ -99,4 +100,22 @@
     </div>
   </div>
 </section>
+
+<script>
+  function myFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("a");
+    for (i = 1; i < li.length; i++) {
+        a = li[i];
+        if (a.innerHTML.toUpperCase().startsWith(filter)) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+          }
+        }
+      }
+      </script>
 @endsection

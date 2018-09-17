@@ -27,8 +27,8 @@ Route::get('/url', function () {
     return view('content/tld');
 });
 
-Route::post('/gettld', 'AjaxController@gettld');
-Route::get('/gettld', 'AjaxController@gettld');
+Route::post('/geturl', 'URLController@urlcheck');
+Route::get('/geturl', 'URLController@urlcheck');
 
 Route::get('/tutorial', function () {
     return view('content/tutorial');
@@ -54,10 +54,14 @@ Route::get('/gmaptest', function () {
     return view('content/gmaptest');
 });
 
-Route::get('/extapi', 'AjaxController@extApiGet');
+Route::get('/extapi', 'URLController@extApiGet');
 
-Route::get('/extendedcheck', 'AjaxController@extendedCheck');
+Route::get('/extendedcheck', 'URLController@extendedCheck');
 
 Route::get('/map', function () {
     return view('content/map');
+});
+
+Route::get('/about', function () {
+    return view('content/about');
 });

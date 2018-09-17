@@ -37,7 +37,7 @@
                 <li><a href="/url" class="animsition-link">Check URL</a></li>
                 <li><a href="/services" class="animsition-link">Find Services</a></li>
                 <li><a href="/map" class="animsition-link">Find iLocations</a></li>
-                <li><a href="/attr" class="animsition-link">About</a></li>
+                <li><a href="/about" class="animsition-link">About</a></li>
               </ul>
             </nav>  
           </div>
@@ -49,10 +49,10 @@
             @yield('content')
         </div>
     </div>
-    <a class="templateux-section templateux-cta animsition-link mt-5" href="contact.html" data-aos="fade-up">
+    <a class="templateux-section templateux-cta animsition-link mt-5" href="https://chrome.google.com/webstore/category/extensions" data-aos="fade-up">
       <div class="container-fluid">
         <div class="cta-inner">
-          <h2><span class="words-1">Give us some feedback.</span> <span class="words-2">Let's improve together.</span></h2>
+          <h2><span class="words-1">Get our 'iLeap Secure' Browser Extension</span> <span class="words-2">Stay safe always!!</span></h2>
         </div>
       </div>
     </a>
@@ -69,10 +69,7 @@
           </p>
           </div>
           <div class="col-md-6 text-md-right text-center footer-social">
-            <a href="#" class="p-3"><span class="icon-facebook2"></span></a>
-            <a href="#" class="p-3"><span class="icon-twitter2"></span></a>
-            <a href="#" class="p-3"><span class="icon-dribbble2"></span></a>
-            <a href="#" class="p-3"><span class="icon-instagram"></span></a>
+            Thank you :)
           </div>
         </div>
       </div>

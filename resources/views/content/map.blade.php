@@ -216,7 +216,7 @@ function detailsFun(x){
           <div id='map'></div>
 
           <script>
-            mapboxgl.accessToken = 'pk..';
+            mapboxgl.accessToken = 'pk. . ';
             var map = new mapboxgl.Map({
               container: 'map',
               style: 'mapbox://styles/mapbox/streets-v9',

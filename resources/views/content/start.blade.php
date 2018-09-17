@@ -2,6 +2,7 @@
 
 @section('content')
     <!-- END templateux-navbar -->
+
     <br><Br>
     <section class="templateux-hero">
       <div class="container">
@@ -12,7 +13,7 @@
           </div>
           <div class="col-md-7" data-aos="fade-up">
             <figure>
-                <img src="images/testui.png" alt="Free Template" class="img-fluid">  
+                <img src="images/senior4.png" alt="Free Template" class="img-fluid">  
               </figure>
             </div>
           <div class="progress">
@@ -57,40 +58,40 @@
     
         <div class="row">
           <div class="col-lg-4 col-md-6" data-aos="fade-up">
-            <a class="project animsition-link" href="work-single.html">
+            <a class="project animsition-link" href="{{url('/map')}}">
               <figure>
-                <img src="images/older.jpg" alt="Free Template" class="img-fluid">  
+                <img src="images/map.jpg" alt="Free Template" class="img-fluid">  
               </figure>
               <div class="project-hover">
                 <div class="project-hover-inner">
-                  <h2>Keep smiling!</h2>
-                  <span>:)</span>
+                  <h2>Find on the go Internet spots</h2>
+                  <span>See where you can access safe internet on large monitors outside your home.</span>
                 </div>
               </div>
             </a>
           </div>
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <a class="project animsition-link" href="work-single.html">
+            <a class="project animsition-link" href="">
               <figure>
                 <img src="images/com.jpg" alt="Free Template" class="img-fluid">  
               </figure>
               <div class="project-hover">
                 <div class="project-hover-inner">
-                  <h2>Something else</h2>
-                  <span>View</span>
+                  <h2>Search engine</h2>
+                  <span>Yet to come</span>
                 </div>
               </div>
             </a>
           </div>
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <a class="project animsition-link" href="work-single.html">
+            <a class="project animsition-link" href="{{url('/about')}}">
               <figure>
-                <img src="images/hero_1.jpg" alt="Free Template" class="img-fluid">  
+                <img src="images/older.jpg" alt="Free Template" class="img-fluid">  
               </figure>
               <div class="project-hover">
                 <div class="project-hover-inner">
-                  <h2>Something else</h2>
-                  <span>View</span>
+                  <h2>About</h2>
+                  <span>Credits</span>
                 </div>
               </div>
             </a>
