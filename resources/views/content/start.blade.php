@@ -13,7 +13,7 @@
           </div>
           <div class="col-md-7" data-aos="fade-up">
             <figure>
-                <img src="images/senior4.png" alt="Free Template" class="img-fluid">  
+                <img src="images/seniors5.png" alt="We love iLeap" class="img-fluid">  
               </figure>
             </div>
           <div class="progress">

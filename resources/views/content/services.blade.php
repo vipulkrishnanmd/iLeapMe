@@ -41,7 +41,7 @@
 
     <div class="row">
       <div class="col-lg-4 col-md-6" data-aos="fade-up">
-        <a class="project animsition-link" href="{{url('/service/33')}}">
+        <a class="project animsition-link" href="{{url('/service/35')}}">
           <figure>
             <img src="images/social-media.jpg" alt="Free Template" class="img-fluid">  
           </figure>
@@ -54,7 +54,7 @@
         </a>
       </div>
       <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-        <a class="project animsition-link" href="{{url('/service/43')}}">
+        <a class="project animsition-link" href="{{url('/service/28')}}">
           <figure>
             <img src="images/news.jpg" alt="Free Template" class="img-fluid">  
           </figure>
@@ -67,7 +67,7 @@
         </a>
       </div>
       <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-        <a class="project animsition-link" href="{{url('/service/44')}}">
+        <a class="project animsition-link" href="{{url('/service/45')}}">
           <figure>
             <img src="images/hollywood.jpg" alt="Free Template" class="img-fluid">  
           </figure>

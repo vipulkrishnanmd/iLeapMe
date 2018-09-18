@@ -69,7 +69,7 @@ class URLController extends Controller
 		// calling api
 		$opr_res = $opr_client->request('GET', $opr_url, [
 			'headers' => [
-				'API-OPR' => ' '
+				'API-OPR' => ''
 			]
 		]);
 
@@ -164,7 +164,7 @@ class URLController extends Controller
         // calling the api 
         $gsb_body = json_decode($gsb_body_json, true);
           
-        $gsb_res = $gsb_client->request('POST', 'https://safebrowsing.googleapis.com/v4/threatMatches:find?key= ', ['json' => $gsb_body]);
+        $gsb_res = $gsb_client->request('POST', 'https://safebrowsing.googleapis.com/v4/threatMatches:find?key=', ['json' => $gsb_body]);
         $gsb_res_body = $gsb_res->getBody();
 
         $gsb_res_obj = json_decode($gsb_res_body);
@@ -343,8 +343,8 @@ class URLController extends Controller
       	// else uses the API
         else{
 
-          $access_key = " ";
-          $secret_key = " ";
+          $access_key = "";
+          $secret_key = "";
 
           $url = $domain;
 
@@ -519,8 +519,8 @@ class URLController extends Controller
 			$code = '<div id="card_section"><h3 style="text-align:center" class="text-danger">Something Went Wrong</h3></div>';
 		}
 		finally{
-        // return
-        return response()->json(['code' => $code]);
+        	// return
+        	return response()->json(['code' => $code]);
     	}
 	}
 
@@ -539,7 +539,7 @@ class URLController extends Controller
       // calling api
       $opr_res = $opr_client->request('GET', $opr_url, [
             'headers' => [
-                'API-OPR' => ' '
+                'API-OPR' => ''
             ]
       ]);
 
