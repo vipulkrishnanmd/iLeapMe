@@ -14,6 +14,7 @@
     
     
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    
   </head>
   <body>
   
@@ -37,6 +38,7 @@
                 <li><a href="/url" class="animsition-link">Check URL</a></li>
                 <li><a href="/services" class="animsition-link">Find Services</a></li>
                 <li><a href="/map" class="animsition-link">Find iLocations</a></li>
+                <li><a href="/chat" class="animsition-link">Hotline</a></li>
                 <li><a href="/about" class="animsition-link">About</a></li>
               </ul>
             </nav>  
