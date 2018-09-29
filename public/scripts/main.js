@@ -66,7 +66,8 @@ FriendlyChat.prototype.initFirebase = function() {
 FriendlyChat.prototype.loadMessages = function() {
 
   if(ileapcode == null || ileapcode == ''){
-	  alert('invalid');
+	  alert('No or Invalid Secret Key. Please check');
+    window.location.href = "/chat";
 	  //return;
   }
   
@@ -74,7 +75,8 @@ FriendlyChat.prototype.loadMessages = function() {
   var usersRef = this.database.ref('messages');
   usersRef.once('value', function(snapshot) {
   if (!snapshot.hasChild(ileapcode)) {
-    alert('doesnt exist');
+    alert('Invalid Secret Key. Please check');
+    window.location.href = "/chat";
 	//return;
   }
 });
