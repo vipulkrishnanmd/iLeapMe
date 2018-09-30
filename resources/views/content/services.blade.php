@@ -22,7 +22,7 @@
 </script>
 
 <section class="templateux-hero"  data-scrollax-parent="true">
-  <!-- <div class="cover" data-scrollax="properties: { translateY: '30%' }"><img src="images/hero_2.jpg" /></div> -->
+  <!-- Heading and Text -->
 
   <div class="container">
     <div class="row align-items-center justify-content-center intro">
@@ -95,7 +95,9 @@
         <input type="text" id="myInput" onkeyup="myFunction();" placeholder="Search for services.." title="Type in a name" class="form-control form-control-lg form-control-borderless">
       </a>
       @foreach ($services as $service)
-      <a href="/service/{{$service->id}}" class="list-group-item list-group-item-action">{{ $service->service }}</a>
+      @if($service->service != 'ABORTION')
+      <a href="/service/{{$service->id}}" class="list-group-item list-group-item-action">{{ strtoupper($service->service) }}</a>
+      @endif
       @endforeach
     </div>
   </div>

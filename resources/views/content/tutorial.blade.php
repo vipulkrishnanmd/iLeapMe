@@ -1,3 +1,5 @@
+<!-- Old page.. Not using now.. Test purpose only -->
+
 @extends('layouts.app')
 <style type="text/css">
 .jumbotron h1,

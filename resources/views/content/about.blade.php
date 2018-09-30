@@ -2,12 +2,12 @@
 
 @section('content')
 
+<!-- Page for showing the about -->
 
 <div class="container">
 
-
   <section class="templateux-hero"  data-scrollax-parent="true">
-    <!-- <div class="cover" data-scrollax="properties: { translateY: '30%' }"><img src="images/hero_2.jpg" /></div> -->
+    <!-- Heading and Text -->
 
     <div class="container">
       <div class="row align-items-center justify-content-center intro">
@@ -23,7 +23,7 @@
     </div>
   </section>
 
-
+<!-- Dummy -->
   <div id="card_section">
     <section class="templateux-portfolio-overlap mb-5" id="next">
       <div class="container-fluid">

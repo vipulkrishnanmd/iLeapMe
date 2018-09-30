@@ -2,9 +2,8 @@
 
 @section('content')
 <link rel="stylesheet" href="{{asset('css/w3.css')}}">
-<!-- Main jumbotron for a primary marketing message or call to action -->
 <br><br><br><br><br><br><br><br><br>
-
+<!-- Heading and Text with wiki test -->
 <section class="templateux-portfolio-overlap" id="next">
 	<div class="container-fluid">
 		<div class="container">
@@ -22,7 +21,7 @@
 <section class="templateux-portfolio-overlap" id="next2">
 	<div class="container-fluid">
 		<div class="container">
-			
+			<!-- Popular provider section -->
 			<div class="w3-bar w3-dark-gray">
 				<div class="w3-bar-item">Popular Service Provider</div>
 			</div>  
@@ -42,14 +41,13 @@
 
 			</div>
 
-			<!-- END row -->
-
 			<br>
+
+			<!-- Risk section -->
 			<div class="w3-bar w3-dark-gray">
 				<div class="w3-bar-item">Possible Risks</div>
 			</div> 
 			<br><br>
-			<!-- Example row of columns -->
 			<div class="row">
 				@foreach ($threats as $threat)
 				<div class="col-md-4">
@@ -61,7 +59,7 @@
 
 			<hr>
 
-		</div> <!-- /container -->
+		</div>
 	</div>
 </section>
 @endsection

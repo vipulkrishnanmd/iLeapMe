@@ -1,3 +1,4 @@
+<!-- Test page. Test use only -->
 @extends('layouts.app')
 
 @section('content')
@@ -6,8 +7,7 @@
 
 <div class="container">
 <section class="templateux-hero"  data-scrollax-parent="true">
-  <!-- <div class="cover" data-scrollax="properties: { translateY: '30%' }"><img src="images/hero_2.jpg" /></div> -->
-
+  <!-- Heading and Text -->
   <div class="container">
     <div class="row align-items-center justify-content-center intro">
       <div class="col-md-10" data-aos="fade-up">

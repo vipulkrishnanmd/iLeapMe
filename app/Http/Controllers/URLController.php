@@ -562,7 +562,7 @@ class URLController extends Controller
     }
 
 //*******************************************************************************************************
-
+    // function for extended checking
     public function extendedCheck(Request $request){
 
 		try{
