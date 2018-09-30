@@ -71,14 +71,14 @@
             </a>
           </div>
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <a class="project animsition-link" href="">
+            <a class="project animsition-link" href="{{url('/chat')}}">
               <figure>
                 <img src="images/com.jpg" alt="Free Template" class="img-fluid">  
               </figure>
               <div class="project-hover">
                 <div class="project-hover-inner">
-                  <h2>Search engine</h2>
-                  <span>Yet to come</span>
+                  <h2>Hotline Chat</h2>
+                  <span>Ask someone tp help you in a single click whenever you get some doubt.</span>
                 </div>
               </div>
             </a>
@@ -91,7 +91,7 @@
               <div class="project-hover">
                 <div class="project-hover-inner">
                   <h2>About</h2>
-                  <span>Credits</span>
+                  <span>iLeap</span>
                 </div>
               </div>
             </a>
@@ -166,8 +166,8 @@
                     <span class="icon-monitor display-3"></span>
                   </div>
                   <div class="media-body">
-                    <h3 class="h5">Safe search engine</h3>
-                    <p>Surf the internet with a safe search engine exclussively designed for the seniors</p>
+                    <h3 class="h5">Hotline Chat</h3>
+                    <p>Ask someone tp help you in a single click whenever you get some doubt.</p>
                   </div>
                 </div>
                 
