@@ -67,3 +67,7 @@ Route::get('/about', function () {
 });
 
 Route::get('/chat', 'ChatController@index');
+
+Route::get('/info', function () {
+    return view('content/info');
+});

@@ -51,10 +51,10 @@
             @yield('content')
         </div>
     </div>
-    <a class="templateux-section templateux-cta animsition-link mt-5" href="https://chrome.google.com/webstore/category/extensions" data-aos="fade-up">
+    <a class="templateux-section templateux-cta animsition-link mt-5" href="{{url('/info')}}" data-aos="fade-up">
       <div class="container-fluid">
         <div class="cta-inner">
-          <h2><span class="words-1">Get our 'iLeap Secure' Browser Extension</span> <span class="words-2">Stay safe always!!</span></h2>
+          <h2><span class="words-1">See our tools which would help you</span> <span class="words-2">Find out How to Use</span></h2>
         </div>
       </div>
     </a>
@@ -76,6 +76,7 @@
         </div>
       </div>
     </footer>
+
 
   </div>
 <script src="{{asset('js/scripts-all.js')}}"></script>
