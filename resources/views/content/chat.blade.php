@@ -24,7 +24,7 @@
     <header class="mdl-layout__header mdl-color-text--white .mdl-color--green">
       <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
         <div class="mdl-layout__header-row mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-desktop">
-          <h3><i class="material-icons">chat_bubble_outline</i> iLeap Hotline Chat</h3>
+          <h3><i class="material-icons">chat_bubble_outline</i> iLeapMe Hotline Chat</h3>
         </div>
         <div id="user-container">
           <div hidden id="user-pic"></div>

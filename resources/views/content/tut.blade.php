@@ -21,9 +21,9 @@
 <div class="container">
   <div class="jumbotron">
     <h1 class="txt-success">
-      iLeap!
+      iLeapMe!
     </h1>
-    <p class="h3">Internet is made for everyone. It is of course the largest source of information in the present world. We can get a lot of awesome services on the internet. At the sime time there is a lot possible dangers too. At iLeap, our mission is to to give our seniors a smooth and safe entry into the world of the internet. We care more for your safty and we have made a number of tools exclussively for seniors to stay safe on the internet. We will give a brief introduction to the internet before we introduce the tools.
+    <p class="h3">Internet is made for everyone. It is of course the largest source of information in the present world. We can get a lot of awesome services on the internet. At the sime time there is a lot possible dangers too. At iLeapMe, our mission is to to give our seniors a smooth and safe entry into the world of the internet. We care more for your safty and we have made a number of tools exclussively for seniors to stay safe on the internet. We will give a brief introduction to the internet before we introduce the tools.
     </p>
   </div>
 

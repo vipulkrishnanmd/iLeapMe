@@ -28,7 +28,7 @@
     <div class="row align-items-center justify-content-center intro">
       <div class="col-md-10" data-aos="fade-up">
         <h1>Find a Service</h1>
-        <p class="lead">Find a service on the internet. See the popular categories below. Use the search box to filter.</p>
+        <p class="lead">The Internet is expanding every second. We have to know about the various services offered on the internet to make the most of it. See the popular categories below. Use the search box to filter.</p>
         <a href="#next" class="go-down js-smoothscroll"></a>
       </div>
     </div>
@@ -90,12 +90,14 @@
 <section class="templateux-portfolio-overlap" id="next">
   <div class="container-fluid">
     <!-- List section -->
-    <div class="list-group" data-aos="fade-up" id='myUL'>
+     <!-- Collapse list button -->
+    <p class="text-light text-center"><a class="btn btn-danger btn-lg" data-toggle="collapse" data-target="#myUL" role="button">See More Services</a></p>
+    <div class="list-group collapse" data-aos="fade-up" id='myUL'>
       <a class="list-group-item active">
         <input type="text" id="myInput" onkeyup="myFunction();" placeholder="Search for services.." title="Type in a name" class="form-control form-control-lg form-control-borderless">
       </a>
       @foreach ($services as $service)
-      @if($service->service != 'ABORTION')
+      @if($service->service != 'ABORTION' && $service->service != 'ADULT CONTENT')
       <a href="/service/{{$service->id}}" class="list-group-item list-group-item-action">{{ strtoupper($service->service) }}</a>
       @endif
       @endforeach

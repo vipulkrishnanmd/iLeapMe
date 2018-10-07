@@ -10,8 +10,8 @@
     <div class="container">
       <div class="row align-items-center justify-content-center intro">
         <div class="col-md-10" data-aos="fade-up">
-          <h1>iLeap Hotline Chat</h1>
-          <p class="lead">iLeap Hotline Chat does its best with the iLeap Hotline Browser Extension. Please install the extension for your browser. Or please submit your secret code below.
+          <h1>iLeapMe Hotline Chat</h1>
+          <p class="lead">iLeapMe Hotline Chat does its best with the iLeapMe Hotline Browser Extension. Please install the extension for your browser. Or please submit your secret code below.
             <div class="col-12 col-md-10 col-lg-8">
               <div class="card-body row no-gutters align-items-center">
                 <div class="col-auto">

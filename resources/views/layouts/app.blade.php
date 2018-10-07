@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>iLeap &mdash; </title>
+    <title>iLeapMe</title>
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/aos.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/hamburgers/hamburgers.min.css')}}">
@@ -23,7 +23,7 @@
     <header class="templateux-navbar" data-aos="fade-down">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-sm-3 col-3"><div class="site-logo"><a href="/" class="animsition-link">iLeap</a></div></div>
+          <div class="col-sm-3 col-3"><div class="site-logo"><a href="/" class="animsition-link">iLeapMe</a></div></div>
           <div class="col-sm-9 col-9 text-right">
 
             <button class="hamburger hamburger--spin toggle-menu ml-auto js-toggle-menu" type="button">
@@ -34,11 +34,12 @@
 
             <nav class="templateux-menu js-templateux-menu" role="navigation">
               <ul class="list-unstyled">
-                <li class="d-md-none d-block active"><a href="index.html" class="animsition-link">Home</a></li>
+		            <li><a href="/" class="animsition_link">Home</a></li>
                 <li><a href="/url" class="animsition-link">Check URL</a></li>
                 <li><a href="/services" class="animsition-link">Find Services</a></li>
                 <li><a href="/map" class="animsition-link">Find iLocations</a></li>
                 <li><a href="/chat" class="animsition-link">Hotline</a></li>
+		            <li><a href="/info" class="animsition-link">Learn to Use</a></li>
                 <li><a href="/about" class="animsition-link">About</a></li>
               </ul>
             </nav>  

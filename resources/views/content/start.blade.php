@@ -13,7 +13,7 @@
           </div>
           <div class="col-md-7" data-aos="fade-up">
             <figure>
-                <img src="images/seniors5.png" alt="We love iLeap" class="img-fluid">  
+                <img src="images/seniors5.png" alt="We love iLeapMe" class="img-fluid">  
               </figure>
             </div>
           <div class="progress">
@@ -78,7 +78,7 @@
               <div class="project-hover">
                 <div class="project-hover-inner">
                   <h2>Hotline Chat</h2>
-                  <span>Ask someone tp help you in a single click whenever you get some doubt.</span>
+                  <span>Ask someone to help you in a single click whenever you have some doubts.</span>
                 </div>
               </div>
             </a>
@@ -91,7 +91,7 @@
               <div class="project-hover">
                 <div class="project-hover-inner">
                   <h2>About</h2>
-                  <span>iLeap</span>
+                  <span>iLeapMe</span>
                 </div>
               </div>
             </a>
@@ -114,7 +114,7 @@
 
             <div class="row">
               <div class="col-md-12">
-                <h2 class="mb-5">We make our seniors safe on the internet. We provide them tools and tricks to stay safe online.</h2>
+                <h2 class="mb-5">We make our elders safe on the internet. We provide tools and tricks to stay safe online.</h2>
               </div>
             </div>
             
@@ -140,7 +140,7 @@
                   </div>
                   <div class="media-body">
                     <h3 class="h5">Check your URL.</h3>
-                    <p>Ensure a website is safe and good for you before going to it. We inform you all you wnat to know about a website</p>
+                    <p>Ensure a website is safe and good for you before going to it. We inform you all you want to know about a website.</p>
                   </div>
                 </div>
               </div>
@@ -155,7 +155,7 @@
                   </div>
                   <div class="media-body">
                     <h3 class="h5">Find free internet spot</h3>
-                    <p>Dont use the internet on your phone? Find a public internet access point to use internet on the go.</p>
+                    <p>Don't use the internet on your phone? Find a public internet access point to use internet on the go.</p>
                   </div>
                 </div>
               </div>
@@ -167,7 +167,7 @@
                   </div>
                   <div class="media-body">
                     <h3 class="h5">Hotline Chat</h3>
-                    <p>Ask someone tp help you in a single click whenever you get some doubt.</p>
+                    <p>Ask someone to help you in a single click whenever you get some doubt.</p>
                   </div>
                 </div>
                 

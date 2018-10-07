@@ -10,7 +10,7 @@
       <div class="row align-items-center justify-content-center intro">
         <div class="col-md-10" data-aos="fade-up">
           <h1>Check your URL</h1>
-          <p class="lead">Knowing more about a website keeps you safe in the internet. Before you visit any new website, just have a ckeck here to ensure that your website is safe and free of any malicious contents.
+          <p class="lead">Knowing more about a website keeps you safe in the internet. Before you visit any new website, just have a check here to ensure that your website is safe and free of any malicious content.
             <div class="col-12 col-md-10 col-lg-8">
               <div class="card-body row no-gutters align-items-center">
                 <div class="col-auto">
@@ -98,7 +98,7 @@ function validateForm() {
 
 // function to check if the url is valid
 function ValidURL(str) {
-  var regex = /(http|https):\/\/(\w+:{0,1}\w*)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/;
+  var regex = /((http|https):\/\/(\w+:{0,1}\w*)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%!\-\/]))?)/;
   if(!regex .test(str)) {
     return false;
   } else {
