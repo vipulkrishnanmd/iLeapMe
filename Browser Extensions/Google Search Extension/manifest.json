@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+ 
+  "name": "iLeapMe-search-ext",
+  "version": "0.1.0",
+  "description": "Search engine extension",
+ 
+  "content_scripts": [{
+    "css": ["styles.css"],
+    "js": ["content.js"],
+	"matches": ["*://*/*"]
+  }],
+  
+  "permissions": [
+      "storage"
+    ],
+  "web_accessible_resources": ["logo.png"]
+ 
+}

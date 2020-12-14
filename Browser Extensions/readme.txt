@@ -1,0 +1,1 @@
+The broser extensions are delivered as unpacked. You can go to chrome developer page and try adding the extensions. You can also directly publich the extensions to Chrome store or other similar places.

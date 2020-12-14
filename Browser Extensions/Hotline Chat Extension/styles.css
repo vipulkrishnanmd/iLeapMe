@@ -1,0 +1,46 @@
+
+@import url("base.css");
+
+#ileaphotext{
+    position: fixed;
+	top: 0%;
+    left: 0%;
+    background-color: #f1f1f1;
+    text-align: center;
+    border: 1px solid #d3d3d3;
+	z-index: 100000;
+}
+
+#ileaphotextheader {
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    background-color: #2196F3;
+    color: #fff;
+	z-index: 100000;
+}
+
+.ileapbutton {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+	color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}

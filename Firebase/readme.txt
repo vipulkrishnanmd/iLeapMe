@@ -1,0 +1,1 @@
+Once the Nodejs CLI for Firebase it set up, the index.js file has to be used to replace the /functions/index.js file in the directory. Then deploy the code to Firebase.
