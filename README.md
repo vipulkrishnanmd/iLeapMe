@@ -7,6 +7,6 @@ The mobile app is hotline communication tool to communicate with someone who is 
 
 A second browser extension checks all entries in the Google search results and marks them as safe if they are.
 
-iLeapMe uses various external APIs to check the websites.
+The web application is made using PHP Laravel framework. Adroid application is written in Java. iLeapMe uses various external APIs to check the websites.
 
 [Watch product video.](https://www.youtube.com/watch?v=Ijlh1CF1wn4)
