@@ -9,4 +9,4 @@ A second browser extension checks all entries in the Google search results and m
 
 The web application is made using PHP Laravel framework. Adroid application is written in Java. iLeapMe uses various external APIs to check the websites.
 
-[Watch product video.](https://www.youtube.com/watch?v=Ijlh1CF1wn4)
+[Watch product video.](https://bit.ly/3aLc700)
